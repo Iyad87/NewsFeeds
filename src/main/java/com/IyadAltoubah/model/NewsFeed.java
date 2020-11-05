@@ -18,7 +18,7 @@ public class NewsFeed {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-     private long id;
+    private long id;
 
     private String title;
 
