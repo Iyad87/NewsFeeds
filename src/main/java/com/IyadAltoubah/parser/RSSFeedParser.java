@@ -1,6 +1,7 @@
 package com.IyadAltoubah.parser;
 
 import com.IyadAltoubah.model.Feed;
+import com.IyadAltoubah.repository.NewsFeedRepository;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
@@ -111,5 +112,4 @@ public class RSSFeedParser {
         }
         return result;
     }
-
 }

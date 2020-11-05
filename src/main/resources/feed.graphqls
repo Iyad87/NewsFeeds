@@ -1,0 +1,11 @@
+type Query {
+    feed: [Feed]
+}
+
+type Feed {
+    id: Int
+    title: String
+    description: String
+    pubdate: String
+    image: String
+}
