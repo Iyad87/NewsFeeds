@@ -1,20 +1,13 @@
 package com.IyadAltoubah.model;
 
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@ToString
+@Data
 @Entity
-@Table(name = "newsFeed")
-public class NewsFeed {
+@Table(name = "feed")
+public class Feed {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
