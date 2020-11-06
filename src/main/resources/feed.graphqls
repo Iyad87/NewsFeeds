@@ -9,3 +9,4 @@ type Feed {
     pubdate: String
     image: String
 }
+

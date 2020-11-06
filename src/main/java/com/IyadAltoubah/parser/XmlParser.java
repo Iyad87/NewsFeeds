@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RSSFeedParser {
+public class XmlParser {
 
     static final String ITEM = "item";
     static final String TITLE = "title";
@@ -25,19 +25,7 @@ public class RSSFeedParser {
     static final String ENCLOSURE = "enclosure";
 
 
-    final URL url;
-
-    public RSSFeedParser(String feedUrl) {
-
-        try {
-            this.url = new URL(feedUrl);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
-    public List<Feed> readFeed() throws XMLStreamException {
+    public List<Feed> readXmlFeed(URL url) {
         Feed feed = null;
         List<Feed> feedList = new ArrayList<>();
 
@@ -54,7 +42,7 @@ public class RSSFeedParser {
 
             // Setup a new eventReader
 
-            InputStream in = read();
+            InputStream in = url.openStream();
             XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
 
             // read the XML document
@@ -91,17 +79,10 @@ public class RSSFeedParser {
                     }
                 }
             }
-        } catch (XMLStreamException e) {
+        } catch (XMLStreamException | IOException e) {
             throw new RuntimeException(e);
         }
         return feedList;
-    }
-    private InputStream read() {
-        try {
-            return url.openStream();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     private String getCharacterData(XMLEventReader eventReader) throws XMLStreamException {

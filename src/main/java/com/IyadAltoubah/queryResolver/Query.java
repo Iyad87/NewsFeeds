@@ -7,15 +7,14 @@ import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 
 @Component
-public class FeedQueryResolver implements GraphQLQueryResolver {
+public class Query implements GraphQLQueryResolver {
 
     @Autowired
-    private NewsFeedRepository newsFeedRepository;
+    private NewsFeedRepository newsFeedRepository = null;
 
-    public Iterable<Feed>  getFeeds(){
+    public Iterable<Feed> feed(){
         return newsFeedRepository.findAll();
     }
 }
