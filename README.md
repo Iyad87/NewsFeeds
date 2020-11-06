@@ -1,4 +1,4 @@
-## AssignmentNewsFeeds
+
 ## News feeds web application  
 ### Technologies
  - Java 1.8
