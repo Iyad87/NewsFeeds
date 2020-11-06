@@ -44,6 +44,20 @@ http://localhost:8080/graphiql
 
 ```
 
+
+### Then write these query to retrieve the data:
+
+```
+{
+  feed {
+    title
+    description
+    pubdate
+    image
+  }
+}
+```
+
 ## Get Data from Database using @REST Controller
 
 ```
@@ -59,18 +73,6 @@ http://localhost:8080/feeds/1
 
 ``` 
 
-### Then write these query to retrieve the data:
-
-```
-{
-  feed {
-    title
-    description
-    pubdate
-    image
-  }
-}
-```
   
 
 
