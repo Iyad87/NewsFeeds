@@ -1,8 +1,6 @@
 package com.IyadAltoubah.parser;
 
 import com.IyadAltoubah.model.Feed;
-import com.IyadAltoubah.repository.NewsFeedRepository;
-
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
@@ -11,7 +9,6 @@ import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.XMLEvent;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +23,7 @@ public class XmlParser {
 
 
     public List<Feed> readXmlFeed(URL url) {
-        Feed feed = null;
+        Feed feed;
         List<Feed> feedList = new ArrayList<>();
 
         try {

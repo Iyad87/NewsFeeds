@@ -25,5 +25,4 @@ public class FeedController {
   public Optional<Feed> getFeedById(@PathVariable long id){
       return newsFeedRepository.findById(id);
     }
-
 }
