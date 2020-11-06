@@ -35,12 +35,29 @@ mvn spring-boot:run
 ```
 
 
+
+
 ### Get Data from Database using GraphQL
 
 ```
 http://localhost:8080/graphiql
 
 ```
+
+## Get Data from Database using @REST Controller
+
+```
+http://localhost:8080/feeds
+
+``` 
+
+### Or by Feed ID 
+
+
+```
+http://localhost:8080/feeds/1
+
+``` 
 
 ### Then write these query to retrieve the data:
 
